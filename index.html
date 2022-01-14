@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doume</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <div class='divPrincipal'>
+        <div class='player1'>
+            <h1>Player 1</h1>
+            <div class='botoes'>
+                <div class='linha'>
+                    <button class='botao' onclick="personagem('Maria', 1)">Maria</button>
+                    <button class='botao' onclick="personagem('Letícia', 1)">Letícia</button>
+                </div>
+                <div class='linha'>
+                    <button class='botao' onclick="personagem('João', 1)">João</button>
+                    <button class='botao' onclick="personagem('Felipe', 1)">Felipe</button>
+                </div>
+                <div class='linha'>
+                    <button class='botao' onclick="personagem('Kenzo', 1)">Kenzo</button>
+                </div>
+            </div>
+        </div>
+        <div class='center'>
+            <a class='comecar' onclick="comecar()">Começar</a>
+            <div class='c1'>
+
+            </div>
+            <div class='c2'>
+
+            </div>
+        </div>
+        <div class='player1'>
+            <h1>Player 2</h1>
+            <div class='botoes'>
+                <div class='linha'>
+                    <button class='botao' onclick="personagem('Maria', 2)">Maria</button>
+                    <button class='botao' onclick="personagem('Letícia', 2)">Letícia</button>
+                </div>
+                <div class='linha'>
+                    <button class='botao' onclick="personagem('João', 2)">João</button>
+                    <button class='botao' onclick="personagem('Felipe', 2)">Felipe</button>
+                </div>
+                <div class='linha'>
+                    <button class='botao' onclick="personagem('Kenzo', 2)">Kenzo</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://kaboomjs.com/lib/0.5.0/kaboom.js"></script>
+    <script src="./index.js"></script>
+</body>
+</html>
