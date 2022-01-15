@@ -448,10 +448,11 @@ function comecarJogo() {
 
 let rodada = 1;
 let vidaP1, vidaP2
+let numeroRodada
 
 function criarInterface() {
 
-    let numeroRodada = document.createElement('span')
+    numeroRodada = document.createElement('span')
     numeroRodada.className = 'numeroRodada'
     numeroRodada.innerText = "Rodada " + rodada
 
@@ -1299,6 +1300,8 @@ function tirarAtaques() {
 
     divVida = document.createElement('div')
     divVida.className = 'divRodada'
+
+    numeroRodada.innerText = rodada
 
     if(rodada % 2 != 0) {
         divVida.innerText = p2 + " (player 2) está com " + vida2 + " de vida"
