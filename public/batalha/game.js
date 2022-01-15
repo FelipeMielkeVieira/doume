@@ -517,7 +517,6 @@ let ataqueAnterior2
 function mostrarRodada() {
 
     efeitoRodada()
-    variaveis()
 
     divRodada = document.createElement('div')
     divRodada.className = 'divRodada'
@@ -834,6 +833,7 @@ function fAtk1() {
                 vida2 = vida2 - 6
             }
             ataqueAnterior = "Soco"
+            variaveis()
             tirarAtaques()
         } else {
             alert("O mesmo ataque não pode ser usado duas vezes seguidas!")
@@ -860,6 +860,7 @@ function fAtk1() {
             }
 
             ataqueAnterior2 = "Soco"
+            variaveis()
             tirarAtaques()
         } else {
             alert("O mesmo ataque não pode ser usado duas vezes seguidas!")
@@ -886,6 +887,7 @@ function fAtk2() {
                 vida2 -= 8
                 vida1 -= 2
                 ataqueAnterior = "Puxada de Cabelo"
+                variaveis()
                 tirarAtaques()
             }
         }
@@ -896,6 +898,7 @@ function fAtk2() {
                 vida2 -= 4
                 vida1 += 4
                 ataqueAnterior = "Calma"
+                variaveis()
                 tirarAtaques()
             }
         }
@@ -906,6 +909,7 @@ function fAtk2() {
                 vida1 += 3
                 rodadaPensar = rodada + 2
                 ataqueAnterior = "Pensar"
+                variaveis()
                 tirarAtaques()
             }
         }
@@ -916,6 +920,7 @@ function fAtk2() {
                 vida1 += 5
                 fator = 1
                 ataqueAnterior = "Preguiça"
+                variaveis()
                 tirarAtaques()
             }
         }
@@ -927,6 +932,7 @@ function fAtk2() {
                 rodadafrio1 = rodada + 1
                 rodadafrio2 = rodada + 3
                 ataqueAnterior = "Frio"
+                variaveis()
                 tirarAtaques()
             }
         }
@@ -940,6 +946,7 @@ function fAtk2() {
                 vida1 -= 8
                 vida2 -= 2
                 ataqueAnterior2 = "Puxada de Cabelo"
+                variaveis()
                 tirarAtaques()
             }
         }
@@ -950,6 +957,7 @@ function fAtk2() {
                 vida1 -= 4
                 vida2 += 4
                 ataqueAnterior2 = "Calma"
+                variaveis()
                 tirarAtaques()
             }
         }
@@ -960,6 +968,7 @@ function fAtk2() {
                 vida2 += 3
                 rodadaPensar2 = rodada + 2
                 ataqueAnterior2 = "Pensar"
+                variaveis()
                 tirarAtaques()
             }
         }
@@ -970,6 +979,7 @@ function fAtk2() {
                 vida2 += 5
                 fator2 = 1
                 ataqueAnterior2 = "Preguiça"
+                variaveis()
                 tirarAtaques()
             }
         }
@@ -981,6 +991,7 @@ function fAtk2() {
                 rodadafrio11 = rodada + 1
                 rodadafrio22 = rodada + 3
                 ataqueAnterior2 = "Frio"
+                variaveis()
                 tirarAtaques()
             }
         }
@@ -999,52 +1010,120 @@ function fAtk3() {
     if (rodada % 2 != 0) {
 
         if (p == "Maria") {
-            rodada = rodada + 1
+
+            if(ataqueAnterior != "Fofoca") {
+
+                rodada = rodada + 1
+                ataqueAnterior = "Fofoca"
+                variaveis()
+                tirarAtaques()
+            }
         }
         if (p == "Letícia") {
-            vida2 = vida2 - 3
-            rodadacasaco = rodada + 1
+
+            if(ataqueAnterior != "Jogar Casaco") {
+
+                vida2 = vida2 - 3
+                rodadacasaco = rodada + 1
+                ataqueAnterior = "Jogar Casaco"
+                variaveis()
+                tirarAtaques()
+            }
         }
         if (p == "João") {
-            vida2 = vida2 - 4
-            rodadagrossria = rodada + 1
+
+            if(ataqueAnterior != "Grosseria") {
+
+                vida2 = vida2 - 4
+                rodadagrossria = rodada + 1
+                ataqueAnterior = "Grosseria"
+                variaveis()
+                tirarAtaques()
+            }
         }
         if (p == "Felipe") {
-            vida2 = vida2 - 5
-            rodadarinite = rodada + 2
-            rodadahprinite = vida2
+
+            if(ataqueAnterior != "Rinite") {
+
+                vida2 = vida2 - 5
+                rodadarinite = rodada + 2
+                rodadahprinite = vida2
+                ataqueAnterior = "Rinite"
+                variaveis()
+                tirarAtaques()
+            }
         }
         if (p == "Kenzo") {
-            rodadalider = rodada + 1
-            rodadadanolider = rodada + 2
-            rodadahplider = vida1
+
+            if(ataqueAnterior != "Líder") {
+
+                rodadalider = rodada + 1
+                rodadadanolider = rodada + 2
+                rodadahplider = vida1
+                ataqueAnterior = "Líder"
+                variaveis()
+                tirarAtaques()
+            }
         }
     } else {
 
         if (p == "Maria") {
-            rodada = rodada + 1
+
+            if(ataqueAnterior2 != "Fofoca") {
+
+                rodada = rodada + 1
+                ataqueAnterior2 = "Fofoca"
+                variaveis()
+                tirarAtaques()
+            }
         }
         if (p == "Letícia") {
-            vida1 = vida1 - 3
-            rodadacasaco2 = rodada + 1
+
+            if(ataqueAnterior2 != "Jogar Casaco") {
+
+                vida1 = vida1 - 3
+                rodadacasaco2 = rodada + 1
+                ataqueAnterior2 = "Jogar Casaco"
+                variaveis()
+                tirarAtaques()
+            }
         }
         if (p == "João") {
-            vida1 = vida1 - 4
-            rodadagrossria2 = rodada + 1
+
+            if(ataqueAnterior2 != "Grosseria") {
+
+                vida1 = vida1 - 4
+                rodadagrossria2 = rodada + 1
+                ataqueAnterior2 = "Grosseria"
+                variaveis()
+                tirarAtaques()
+            }
         }
         if (p == "Felipe") {
-            vida1 = vida1 - 5
-            rodadarinite2 = rodada + 2
-            rodadahprinite2 = vida1
+
+            if(ataqueAnterior2 != "Rinite") {
+
+                vida1 = vida1 - 5
+                rodadarinite2 = rodada + 2
+                rodadahprinite2 = vida1
+                ataqueAnterior2 = "Rinite"
+                variaveis()
+                tirarAtaques()
+            }
         }
         if (p == "Kenzo") {
-            rodadalider2 = rodada + 1
-            rodadadanolider2 = rodada + 2
-            rodadahplider2 = vida2
+
+            if(ataqueAnterior2 != "Líder") {
+
+                rodadalider2 = rodada + 1
+                rodadadanolider2 = rodada + 2
+                rodadahplider2 = vida2
+                ataqueAnterior2 = "Líder"
+                variaveis()
+                tirarAtaques()
+            }
         }
     }
-
-    tirarAtaques()
 }
 function fAtk4() {
 
@@ -1100,6 +1179,8 @@ function fAtk4() {
     }
 
     tirarAtaques()
+
+    variaveis()
 }
 function fAtk5() {
 
@@ -1238,6 +1319,8 @@ function fAtk5() {
         }
 
     }
+
+    variaveis()
 }
 
 let rodadapensar
