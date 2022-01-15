@@ -511,6 +511,8 @@ function jogo() {
 
 let botaoContinuar
 let divRodada
+let ataqueAnterior
+let ataqueAnterior2
 
 function mostrarRodada() {
 
@@ -814,42 +816,55 @@ function fAtk1() {
 
     if (rodada % 2 != 0) {
 
-        if (p == "Maria") {
-            vida2 = vida2 - 5
-        }
-        if (p == "Letícia") {
-            vida2 = vida2 - 6
-        }
-        if (p == "João") {
-            vida2 = vida2 - 6
-        }
-        if (p == "Felipe") {
-            vida2 = vida2 - 6
-        }
-        if (p == "Kenzo") {
-            vida2 = vida2 - 6
+        if(ataqueAnterior != "Soco") {
+
+            if (p == "Maria") {
+                vida2 = vida2 - 5
+            }
+            if (p == "Letícia") {
+                vida2 = vida2 - 6
+            }
+            if (p == "João") {
+                vida2 = vida2 - 6
+            }
+            if (p == "Felipe") {
+                vida2 = vida2 - 6
+            }
+            if (p == "Kenzo") {
+                vida2 = vida2 - 6
+            }
+            ataqueAnterior = "Soco"
+            tirarAtaques()
+        } else {
+            alert("O mesmo ataque não pode ser usado duas vezes seguidas!")
         }
 
     } else {
 
-        if (p == "Maria") {
-            vida1 -= 5
-        }
-        if (p == "Letícia") {
-            vida1 -= 6
-        }
-        if (p == "João") {
-            vida1 -= 6
-        }
-        if (p == "Felipe") {
-            vida1 -= 6
-        }
-        if (p == "Kenzo") {
-            vida1 -= 6
+        if(ataqueAnterior2 != "Soco") {
+
+            if (p == "Maria") {
+                vida1 -= 5
+            }
+            if (p == "Letícia") {
+                vida1 -= 6
+            }
+            if (p == "João") {
+                vida1 -= 6
+            }
+            if (p == "Felipe") {
+                vida1 -= 6
+            }
+            if (p == "Kenzo") {
+                vida1 -= 6
+            }
+
+            ataqueAnterior2 = "Soco"
+            tirarAtaques()
+        } else {
+            alert("O mesmo ataque não pode ser usado duas vezes seguidas!")
         }
     }
-
-    tirarAtaques()
 }
 
 function fAtk2() {
@@ -865,53 +880,111 @@ function fAtk2() {
     if (rodada % 2 != 0) {
 
         if (p == "Maria") {
-            vida2 -= 8
-            vida1 -= 2
+
+            if(ataqueAnterior != "Puxada de Cabelo") {
+
+                vida2 -= 8
+                vida1 -= 2
+                ataqueAnterior = "Puxada de Cabelo"
+                tirarAtaques()
+            }
         }
         if (p == "Letícia") {
-            vida2 -= 4
-            vida1 += 4
+
+            if(ataqueAnterior != "Calma") {
+
+                vida2 -= 4
+                vida1 += 4
+                ataqueAnterior = "Calma"
+                tirarAtaques()
+            }
         }
         if (p == "João") {
-            vida1 += 3
-            rodadaPensar = rodada + 2
+
+            if(ataqueAnterior != "Pensar") {
+
+                vida1 += 3
+                rodadaPensar = rodada + 2
+                ataqueAnterior = "Pensar"
+                tirarAtaques()
+            }
         }
         if (p == "Felipe") {
-            vida1 += 5
-            fator = 1
+
+            if(ataqueAnterior != "Preguiça") {
+
+                vida1 += 5
+                fator = 1
+                ataqueAnterior = "Preguiça"
+                tirarAtaques()
+            }
         }
         if (p == "Kenzo") {
-            vida1 -= 12
-            rodadafrio1 = rodada + 1
-            rodadafrio2 = rodada + 3
+
+            if(ataqueAnterior != "Frio") {
+
+                vida1 -= 12
+                rodadafrio1 = rodada + 1
+                rodadafrio2 = rodada + 3
+                ataqueAnterior = "Frio"
+                tirarAtaques()
+            }
         }
 
     } else {
 
         if (p == "Maria") {
-            vida1 -= 8
-            vida2 -= 2
+
+            if(ataqueAnterior2 != "Puxada de Cabelo") {
+
+                vida1 -= 8
+                vida2 -= 2
+                ataqueAnterior2 = "Puxada de Cabelo"
+                tirarAtaques()
+            }
         }
         if (p == "Letícia") {
-            vida1 -= 4
-            vida2 += 4
+
+            if(ataqueAnterior2 != "Calma") {
+
+                vida1 -= 4
+                vida2 += 4
+                ataqueAnterior2 = "Calma"
+                tirarAtaques()
+            }
         }
         if (p == "João") {
-            vida2 += 3
-            rodadaPensar2 = rodada + 2
+
+            if(ataqueAnterior2 != "Pensar") {
+
+                vida2 += 3
+                rodadaPensar2 = rodada + 2
+                ataqueAnterior2 = "Pensar"
+                tirarAtaques()
+            }
         }
         if (p == "Felipe") {
-            vida2 += 5
-            fator2 = 1
+
+            if(ataqueAnterior2 != "Preguiça") {
+
+                vida2 += 5
+                fator2 = 1
+                ataqueAnterior2 = "Preguiça"
+                tirarAtaques()
+            }
         }
         if (p == "Kenzo") {
-            vida2 -= 12
-            rodadafrio11 = rodada + 1
-            rodadafrio22 = rodada + 3
+
+            if(ataqueAnterior2 != "Frio") {
+
+                vida2 -= 12
+                rodadafrio11 = rodada + 1
+                rodadafrio22 = rodada + 3
+                ataqueAnterior2 = "Frio"
+                tirarAtaques()
+            }
         }
     }
-
-    tirarAtaques()
 }
 function fAtk3() {
 
