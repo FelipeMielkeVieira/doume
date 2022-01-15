@@ -563,7 +563,7 @@ function escolhaAtaques() {
     linhaInst.style.paddingTop = '35px'
     let nomeP
 
-    if(rodada % 2 != 0) {
+    if (rodada % 2 != 0) {
         nomeP = localStorage.getItem('player1')
     } else {
         nomeP = localStorage.getItem('player2')
@@ -622,42 +622,42 @@ function escolhaAtaques() {
 
 function variaveis() {
 
-    if (rodada == rodadacasaco){
+    if (rodada == rodadacasaco) {
         vida1 = hpcasaco
     }
-    if(rodada == rodadacasaco2){
+    if (rodada == rodadacasaco2) {
         vida2 = hpcasaco2
     }
-    if (fator >= 1 && fator <= 6){
+    if (fator >= 1 && fator <= 6) {
         hppreguiça = vida1
         fator = fator + 1
     }
-    if (fator >= 1 && fator <= 6){
-        dano = (hppreguiça - hp1)*0.8
+    if (fator >= 1 && fator <= 6) {
+        dano = (hppreguiça - hp1) * 0.8
         hp1 = hppreguiça - dano
     }
-    if (fator2 >= 1 && fator2 <= 6){
+    if (fator2 >= 1 && fator2 <= 6) {
         hppreguiça2 = hp2
         fator2 = fator2 + 1
     }
-    if (fator2 >= 1 && fator2 <= 6){
-        dano2 = (hppreguiça2 - vida2)*0.8
+    if (fator2 >= 1 && fator2 <= 6) {
+        dano2 = (hppreguiça2 - vida2) * 0.8
         vida2 = hppreguiça2 - dano2
     }
-    if (rodada == rodadarinite){
-        y = (rodadahprinite - vida2)*2
+    if (rodada == rodadarinite) {
+        y = (rodadahprinite - vida2) * 2
         vida2 = rodadahprinite - y
     }
-    if (rodada == rodadarinite2){
-        y2 = (rodadahprinite2 - vida1)*2
+    if (rodada == rodadarinite2) {
+        y2 = (rodadahprinite2 - vida1) * 2
         vida1 = rodadahprinite2 - y2
     }
-    if (rodada == rodadalider){
-        x = (rodadahplider - vida1)/2
+    if (rodada == rodadalider) {
+        x = (rodadahplider - vida1) / 2
         vida1 = rodadahplider - x
     }
-    if(rodada == rodadalider2){
-        x2 = (rodadahplider2 - vida2)/2
+    if (rodada == rodadalider2) {
+        x2 = (rodadahplider2 - vida2) / 2
         vida2 = rodadahplider2 - x2
     }
 }
@@ -665,40 +665,40 @@ function variaveis() {
 function funcaoUltimate(p, botao) {
 
     if (p == "Maria") {
-        
-        if(rodada > 7) {
+
+        if (rodada > 7) {
             botao.style.backgroundColor = 'green'
         } else {
             botao.style.backgroundColor = 'red'
         }
     }
     if (p == "Letícia") {
-        
-        if(rodada > 11) {
+
+        if (rodada > 11) {
             botao.style.backgroundColor = 'green'
         } else {
             botao.style.backgroundColor = 'red'
         }
     }
     if (p == "João") {
-    
-        if(rodada > 9) {
+
+        if (rodada > 9) {
             botao.style.backgroundColor = 'green'
         } else {
             botao.style.backgroundColor = 'red'
         }
     }
     if (p == "Felipe") {
-        
-        if(rodada > 5) {
+
+        if (rodada > 5) {
             botao.style.backgroundColor = 'green'
         } else {
             botao.style.backgroundColor = 'red'
         }
     }
     if (p == "Kenzo") {
-        
-        if(rodada > 19) {
+
+        if (rodada > 19) {
             botao.style.backgroundColor = 'green'
         } else {
             botao.style.backgroundColor = 'red'
@@ -806,14 +806,14 @@ function fAtk1() {
 
     let p
 
-    if(rodada % 2 != 0) {
+    if (rodada % 2 != 0) {
         p = localStorage.getItem('player1')
     } else {
         p = localStorage.getItem('player2')
     }
 
-    if(rodada % 2 != 0) {
-        
+    if (rodada % 2 != 0) {
+
         if (p == "Maria") {
             vida2 = vida2 - 5
         }
@@ -831,7 +831,7 @@ function fAtk1() {
         }
 
     } else {
-        
+
         if (p == "Maria") {
             vida1 -= 5
         }
@@ -856,14 +856,14 @@ function fAtk2() {
 
     let p
 
-    if(rodada % 2 != 0) {
+    if (rodada % 2 != 0) {
         p = localStorage.getItem('player1')
     } else {
         p = localStorage.getItem('player2')
     }
 
-    if(rodada % 2 != 0) {
-        
+    if (rodada % 2 != 0) {
+
         if (p == "Maria") {
             vida2 -= 8
             vida1 -= 2
@@ -887,7 +887,7 @@ function fAtk2() {
         }
 
     } else {
-        
+
         if (p == "Maria") {
             vida1 -= 8
             vida2 -= 2
@@ -917,13 +917,13 @@ function fAtk3() {
 
     let p
 
-    if(rodada % 2 != 0) {
+    if (rodada % 2 != 0) {
         p = localStorage.getItem('player1')
     } else {
         p = localStorage.getItem('player2')
     }
 
-    if(rodada % 2 != 0) {
+    if (rodada % 2 != 0) {
 
         if (p == "Maria") {
             rodada = rodada + 1
@@ -977,13 +977,13 @@ function fAtk4() {
 
     let p
 
-    if(rodada % 2 != 0) {
+    if (rodada % 2 != 0) {
         p = localStorage.getItem('player1')
     } else {
         p = localStorage.getItem('player2')
     }
 
-    if(rodada % 2 != 0) {
+    if (rodada % 2 != 0) {
 
         if (p == "Maria") {
             vida2 = vida2 - 10
@@ -1032,13 +1032,13 @@ function fAtk5() {
 
     let p
 
-    if(rodada % 2 != 0) {
+    if (rodada % 2 != 0) {
         p = localStorage.getItem('player1')
     } else {
         p = localStorage.getItem('player2')
     }
 
-    if(rodada % 2 != 0) {
+    if (rodada % 2 != 0) {
 
         if (p == "Maria" && ultimate1 == 0 && rodada > 7) {
             vida1 = vida1 + 30
@@ -1057,38 +1057,38 @@ function fAtk5() {
             tirarAtaques()
         }
         if (p == "Felipe" && ultimate1 == 0 && rodada > 5) {
-            
+
             let p1 = localStorage.getItem('player1');
             let p2 = localStorage.getItem('player2');
 
-            if(p1 == "Maria") {
+            if (p1 == "Maria") {
                 vida1 = 50
             }
-            if(p1 == "Letícia") {
+            if (p1 == "Letícia") {
                 vida1 = 40
             }
-            if(p1 == "João") {
+            if (p1 == "João") {
                 vida1 = 50
             }
-            if(p1 == "Felipe") {
+            if (p1 == "Felipe") {
                 vida1 = 30
             }
-            if(p1 == "Kenzo") {
+            if (p1 == "Kenzo") {
                 vida1 = 60
             }
-            if(p2 == "Maria") {
+            if (p2 == "Maria") {
                 vida2 = 50
             }
-            if(p2 == "Letícia") {
+            if (p2 == "Letícia") {
                 vida2 = 40
             }
-            if(p2 == "João") {
+            if (p2 == "João") {
                 vida2 = 50
             }
-            if(p2 == "Felipe") {
+            if (p2 == "Felipe") {
                 vida2 = 30
             }
-            if(p2 == "Kenzo") {
+            if (p2 == "Kenzo") {
                 vida2 = 60
             }
 
@@ -1108,13 +1108,13 @@ function fAtk5() {
             ultimate2 = 1
             tirarAtaques()
         }
-        if (p == "Letícia" && ultimate2 == 0 && rodada > 7) {
+        if (p == "Letícia" && ultimate2 == 0 && rodada > 11) {
             rodadadevoradoradelivros11 = rodada + 1
             rodadadevoradoradelivros22 = rodada + 3
             ultimate2 = 1
             tirarAtaques()
         }
-        if (p == "João" && ultimate2 == 0 && rodada > 7) {
+        if (p == "João" && ultimate2 == 0 && rodada > 9) {
             vida1 = vida1 * 0.70
             ultimate2 = 1
             tirarAtaques()
@@ -1124,41 +1124,41 @@ function fAtk5() {
             let p1 = localStorage.getItem('player1');
             let p2 = localStorage.getItem('player2');
 
-            if(p1 == "Maria") {
+            if (p1 == "Maria") {
                 vida1 = 50
             }
-            if(p1 == "Letícia") {
+            if (p1 == "Letícia") {
                 vida1 = 40
             }
-            if(p1 == "João") {
+            if (p1 == "João") {
                 vida1 = 50
             }
-            if(p1 == "Felipe") {
+            if (p1 == "Felipe") {
                 vida1 = 30
             }
-            if(p1 == "Kenzo") {
+            if (p1 == "Kenzo") {
                 vida1 = 60
             }
-            if(p2 == "Maria") {
+            if (p2 == "Maria") {
                 vida2 = 50
             }
-            if(p2 == "Letícia") {
+            if (p2 == "Letícia") {
                 vida2 = 40
             }
-            if(p2 == "João") {
+            if (p2 == "João") {
                 vida2 = 50
             }
-            if(p2 == "Felipe") {
+            if (p2 == "Felipe") {
                 vida2 = 30
             }
-            if(p2 == "Kenzo") {
+            if (p2 == "Kenzo") {
                 vida2 = 60
             }
 
             ultimate2 = 1
             tirarAtaques()
         }
-        if (p == "Kenzo" && ultimate2 == 0 && rodada > 7) {
+        if (p == "Kenzo" && ultimate2 == 0 && rodada > 19) {
             vida1 = vida1 - 40
             ultimate2 = 1
             tirarAtaques()
@@ -1215,81 +1215,82 @@ let rodadadevoradoradelivros22
 
 function efeitoRodada() {
 
-    if (rodada == rodadapensar){
+    if (rodada == rodadapensar) {
         vida2 = vida2 - 4
     }
-    if (rodada == rodadapensar2){
+    if (rodada == rodadapensar2) {
         vida1 = vida1 - 4
     }
-    if (rodada == rodadafrio1){
+    if (rodada == rodadafrio1) {
         rodada = rodada + 1
     }
-    if (rodada == rodadafrio2){
+    if (rodada == rodadafrio2) {
         rodada = rodada + 1
     }
-    if (rodada == rodadafrio11){
+    if (rodada == rodadafrio11) {
         rodada = rodada + 1
     }
-    if (rodada == rodadafrio22){
+    if (rodada == rodadafrio22) {
         rodada = rodada + 1
     }
-    if (rodada == rodadacasaco){
+    if (rodada == rodadacasaco) {
         hpcasaco = vida1
     }
-    if(rodada == rodadacasaco2){
+    if (rodada == rodadacasaco2) {
         hpcasaco2 = vida2
     }
-    if (rodada == rodadagrossria){
+    if (rodada == rodadagrossria) {
         vida1 = vida1 + 4
     }
-    if (rodada == rodadagrossria2){
+    if (rodada == rodadagrossria2) {
         vida2 = vida2 + 4
     }
-    if (rodada == rodadadanolider){
+    if (rodada == rodadadanolider) {
         vida2 = vida2 - 3
     }
-    if (rodada == rodadadanolider2){
+    if (rodada == rodadadanolider2) {
         vida1 = vida1 - 3
     }
     if (rodada == rodadatapa) {
         rodada = rodada + 1
     }
-    if(rodada == rodadatapa2){
+    if (rodada == rodadatapa2) {
         rodada = rodada + 1
     }
-    if (rodada == rodadasejogar2){
+    if (rodada == rodadasejogar2) {
         vida1 = vida1 + 2
     }
-    if (rodada == rodadasejogar){
+    if (rodada == rodadasejogar) {
         vida2 = vida2 + 2
     }
-    if (rodada == rodadaaparelho){
+    if (rodada == rodadaaparelho) {
         vida2 = vida2 - 5
     }
-    if (rodada == rodadaaparelho2){
+    if (rodada == rodadaaparelho2) {
         vida2 = vida2 - 5
     }
-    if (rodada == rodadaaparelho11){
+    if (rodada == rodadaaparelho11) {
         vida1 = vida1 - 5
     }
-    if (rodada == rodadaaparelho22){
+    if (rodada == rodadaaparelho22) {
         vida1 = vida1 - 5
     }
-    if (rodada == rodadadevoradoradelivros1){
+    if (rodada == rodadadevoradoradelivros1) {
         rodada = rodada + 1
     }
-    if (rodada == rodadadevoradoradelivros2){
+    if (rodada == rodadadevoradoradelivros2) {
         rodada = rodada + 1
     }
-    if(rodada == rodadadevoradoradelivros11){
+    if (rodada == rodadadevoradoradelivros11) {
         rodada = rodada + 1
     }
-    if(rodada == rodadadevoradoradelivros22){
+    if (rodada == rodadadevoradoradelivros22) {
         rodada = rodada + 1
     }
 }
 
 let divVida
+let divVida2
 let botaoContinuar2
 
 function tirarAtaques() {
@@ -1310,13 +1311,13 @@ function tirarAtaques() {
     divVida = document.createElement('div')
     divVida.className = 'divRodada'
 
+    divVida2 = document.createElement('div')
+    divVida2.className = 'divRodada'
+
     numeroRodada.innerText = "Rodada " + rodada
 
-    if(rodada % 2 != 0) {
-        divVida.innerText = p2 + " (player 2) está com " + vida2 + " de vida"
-    } else {
-        divVida.innerText = p1 + " (player 1) está com " + vida1 + " de vida"
-    }
+    divVida.innerText = p1 + " (player 1) está com " + vida1 + " de vida"
+    divVida2.innerText = p2 + " (player 2) está com " + vida2 + " de vida"
 
     botaoContinuar2 = document.createElement('button')
     botaoContinuar2.className = 'botaoContinuar'
@@ -1324,6 +1325,7 @@ function tirarAtaques() {
     botaoContinuar2.onclick = funcaoVerificacao
 
     linhaInst.appendChild(divVida)
+    linhaInst.appendChild(divVida2)
     linhaInst.appendChild(botaoContinuar2)
 }
 
@@ -1332,9 +1334,9 @@ function funcaoVerificacao() {
     linhaInst.removeChild(divVida)
     linhaInst.removeChild(botaoContinuar2)
 
-    if(vida1 <= 0) {
+    if (vida1 <= 0) {
         derrota1();
-    } else if(vida2 <= 0) {
+    } else if (vida2 <= 0) {
         derrota2();
     } else {
         rodada++
@@ -1357,7 +1359,7 @@ function derrota1() {
     botaoContinuar3 = document.createElement('button')
     botaoContinuar3.className = 'botaoContinuar'
     botaoContinuar3.innerText = "Voltar"
-    botaoContinuar3.onclick = function() {
+    botaoContinuar3.onclick = function () {
         window.location.href = "../index.html"
     }
 
@@ -1378,7 +1380,7 @@ function derrota2() {
     botaoContinuar3 = document.createElement('button')
     botaoContinuar3.className = 'botaoContinuar'
     botaoContinuar3.innerText = "Voltar"
-    botaoContinuar3.onclick = function() {
+    botaoContinuar3.onclick = function () {
         window.location.href = "../index.html"
     }
 
