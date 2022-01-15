@@ -1301,7 +1301,7 @@ function tirarAtaques() {
     divVida = document.createElement('div')
     divVida.className = 'divRodada'
 
-    numeroRodada.innerText = rodada
+    numeroRodada.innerText = "Rodada " + rodada
 
     if(rodada % 2 != 0) {
         divVida.innerText = p2 + " (player 2) está com " + vida2 + " de vida"
