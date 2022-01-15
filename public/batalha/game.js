@@ -513,6 +513,9 @@ let divRodada
 
 function mostrarRodada() {
 
+    efeitoRodada()
+    variaveis()
+
     divRodada = document.createElement('div')
     divRodada.className = 'divRodada'
 
