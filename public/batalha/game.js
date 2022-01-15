@@ -1305,6 +1305,9 @@ function tirarAtaques() {
     linhaInst.removeChild(linhaAtk2)
     linhaInst.removeChild(Ult)
 
+    linhaInst.style.display = 'flex'
+    linhaInst.style.flexDirection = 'column'
+    linhaInst.style.justifyContent = 'center'
     linhaInst.style.paddingTop = '0'
 
     divVida = document.createElement('div')
@@ -1331,6 +1334,7 @@ function tirarAtaques() {
 function funcaoVerificacao() {
 
     linhaInst.removeChild(divVida)
+    linhaInst.removeChild(divVida2)
     linhaInst.removeChild(botaoContinuar2)
 
     if (vida1 <= 0) {
