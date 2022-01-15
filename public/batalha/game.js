@@ -1138,49 +1138,115 @@ function fAtk4() {
     if (rodada % 2 != 0) {
 
         if (p == "Maria") {
-            vida2 = vida2 - 10
-            rodadatapa = rodada + 2
+
+            if(ataqueAnterior != "Tapa") {
+
+                vida2 = vida2 - 10
+                rodadatapa = rodada + 2
+                ataqueAnterior = "Tapa"
+                variaveis()
+                tirarAtaques()
+            }
         }
         if (p == "Letícia") {
-            vida2 = vida2 - 7
+            
+            if(ataqueAnterior != "Cabeçada") {
+
+                vida2 = vida2 - 7
+                ataqueAnterior = "Cabeçada"
+                variaveis()
+                tirarAtaques()
+            }
         }
         if (p == "João") {
-            vida2 = vida2 - 8
-            rodadasejogar = rodada + 2
+
+            if(ataqueAnterior != "Se Jogar") {
+
+                vida2 = vida2 - 8
+                rodadasejogar = rodada + 2
+                ataqueAnterior = "Se Jogar"
+                variaveis()
+                tirarAtaques()
+            }
         }
         if (p == "Felipe") {
-            rodadaaparelho = rodada + 2
-            rodadaaparelho2 = rodada + 4
+
+            if(ataqueAnterior != "Tirar Aparelho") {
+
+                rodadaaparelho = rodada + 2
+                rodadaaparelho2 = rodada + 4
+                ataqueAnterior = "Tirar Aparelho"
+                variaveis()
+                tirarAtaques()
+            }
         }
         if (p == "Kenzo") {
-            vida2 = vida2 - 8
+
+            if(ataqueAnterior != "Xingamento") {
+
+                vida2 = vida2 - 8
+                ataqueAnterior = "Xingamento"
+                variaveis()
+                tirarAtaques()
+            }
         }
 
     } else {
 
         if (p == "Maria") {
-            vida1 = vida1 - 10
-            rodadatapa2 = rodada + 2
+
+            if(ataqueAnterior2 != "Tapa") {
+
+                vida1 = vida1 - 10
+                rodadatapa2 = rodada + 2
+                ataqueAnterior2 = "Tapa"
+                variaveis()
+                tirarAtaques()
+            }
         }
         if (p == "Letícia") {
-            vida1 = vida1 - 7
+
+            if(ataqueAnterior2 != "Cabeçada") {
+
+                vida1 = vida1 - 7
+                ataqueAnterior2 = "Cabeçada"
+                variaveis()
+                tirarAtaques()
+            }
         }
         if (p == "João") {
-            vida1 = vida1 - 8
-            rodadasejogar2 = rodada + 2
+
+            if(ataqueAnterior2 != "Se Jogar") {
+
+                vida1 = vida1 - 8
+                rodadasejogar2 = rodada + 2
+                ataqueAnterior2 = "Se Jogar"
+                variaveis()
+                tirarAtaques()
+            }
         }
         if (p == "Felipe") {
-            rodadaaparelho11 = rodada + 2
-            rodadaaparelho22 = rodada + 4
+
+            if(ataqueAnterior2 != "Tirar Aparelho") {
+
+                rodadaaparelho11 = rodada + 2
+                rodadaaparelho22 = rodada + 4
+                ataqueAnterior2 = "Tirar Aparelho"
+                variaveis()
+                tirarAtaques()
+            }
         }
         if (p == "Kenzo") {
-            vida1 = vida1 - 8
+
+            if(ataqueAnterior2 != "Xingamento") {
+
+                vida1 = vida1 - 8
+                ataqueAnterior2 = "Xingamento"
+                variaveis()
+                tirarAtaques()
+            }
         }
     }
-
-    tirarAtaques()
-
-    variaveis()
 }
 function fAtk5() {
 
@@ -1197,17 +1263,20 @@ function fAtk5() {
         if (p == "Maria" && ultimate1 == 0 && rodada > 7) {
             vida1 = vida1 + 30
             ultimate1 = 1
+            variaveis()
             tirarAtaques()
         }
         if (p == "Letícia" && ultimate1 == 0 && rodada > 11) {
             rodadadevoradoradelivros1 = rodada + 1
             rodadadevoradoradelivros2 = rodada + 3
             ultimate1 = 1
+            variaveis()
             tirarAtaques()
         }
         if (p == "João" && ultimate1 == 0 && rodada > 9) {
             vida2 = vida2 * 0.70
             ultimate1 = 1
+            variaveis()
             tirarAtaques()
         }
         if (p == "Felipe" && ultimate1 == 0 && rodada > 5) {
@@ -1247,11 +1316,13 @@ function fAtk5() {
             }
 
             ultimate1 = 1
+            variaveis()
             tirarAtaques()
         }
         if (p == "Kenzo" && ultimate1 == 0 && rodada > 19) {
             vida2 = vida2 - 40
             ultimate1 = 1
+            variaveis()
             tirarAtaques()
         }
 
@@ -1260,17 +1331,20 @@ function fAtk5() {
         if (p == "Maria" && ultimate2 == 0 && rodada > 7) {
             vida2 = vida2 + 30
             ultimate2 = 1
+            variaveis()
             tirarAtaques()
         }
         if (p == "Letícia" && ultimate2 == 0 && rodada > 11) {
             rodadadevoradoradelivros11 = rodada + 1
             rodadadevoradoradelivros22 = rodada + 3
             ultimate2 = 1
+            variaveis()
             tirarAtaques()
         }
         if (p == "João" && ultimate2 == 0 && rodada > 9) {
             vida1 = vida1 * 0.70
             ultimate2 = 1
+            variaveis()
             tirarAtaques()
         }
         if (p == "Felipe" && ultimate2 == 0 && rodada > 5) {
@@ -1310,17 +1384,17 @@ function fAtk5() {
             }
 
             ultimate2 = 1
+            variaveis()
             tirarAtaques()
         }
         if (p == "Kenzo" && ultimate2 == 0 && rodada > 19) {
             vida1 = vida1 - 40
             ultimate2 = 1
+            variaveis()
             tirarAtaques()
         }
 
     }
-
-    variaveis()
 }
 
 let rodadapensar
