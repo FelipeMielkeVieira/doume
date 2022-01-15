@@ -1305,7 +1305,6 @@ function tirarAtaques() {
     linhaInst.removeChild(linhaAtk2)
     linhaInst.removeChild(Ult)
 
-    linhaInst.style.display = 'flex'
     linhaInst.style.paddingTop = '0'
 
     divVida = document.createElement('div')
