@@ -1157,8 +1157,8 @@ function fAtk5() {
     tirarAtaques()
 }
 
-let rodadaPensar
-let rodadaPensar2
+let rodadapensar
+let rodadapensar2
 let fator
 let fator2
 let hppreguiça
