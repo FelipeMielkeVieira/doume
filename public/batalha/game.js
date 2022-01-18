@@ -621,6 +621,28 @@ function escolhaAtaques() {
     atk5.onclick = fAtk5;
 }
 
+function preguica1() {
+    if (fator >= 1 && fator <= 6) {
+        hppreguiça = vida1
+        fator = fator + 1
+    }
+    if (fator2 >= 1 && fator2 <= 6) {
+        hppreguiça2 = vida2
+        fator2 = fator2 + 1
+    }
+}
+
+function preguica2() {
+    if (fator >= 1 && fator <= 6) {
+        dano = (hppreguiça - vida1) * 0.8
+        vida1 = parseInt(hppreguiça - dano)
+    }
+    if (fator2 >= 1 && fator2 <= 6) {
+        dano2 = (hppreguiça2 - vida2) * 0.8
+        vida2 = parseInt(hppreguiça2 - dano2)
+    }
+}
+
 function variaveis() {
 
     if (rodada == rodadacasaco) {
@@ -628,22 +650,6 @@ function variaveis() {
     }
     if (rodada == rodadacasaco2) {
         vida2 = hpcasaco2
-    }
-    if (fator >= 1 && fator <= 6) {
-        hppreguiça = vida1
-        fator = fator + 1
-    }
-    if (fator >= 1 && fator <= 6) {
-        dano = (hppreguiça - hp1) * 0.8
-        hp1 = hppreguiça - dano
-    }
-    if (fator2 >= 1 && fator2 <= 6) {
-        hppreguiça2 = hp2
-        fator2 = fator2 + 1
-    }
-    if (fator2 >= 1 && fator2 <= 6) {
-        dano2 = (hppreguiça2 - vida2) * 0.8
-        vida2 = hppreguiça2 - dano2
     }
     if (rodada == rodadarinite) {
         y = (rodadahprinite - vida2) * 2
@@ -818,21 +824,27 @@ function fAtk1() {
         if(ataqueAnterior != "Soco") {
 
             if (p == "Maria") {
+                preguica1()
                 vida2 = vida2 - 5
             }
             if (p == "Letícia") {
+                preguica1()
                 vida2 = vida2 - 6
             }
             if (p == "João") {
+                preguica1()
                 vida2 = vida2 - 6
             }
             if (p == "Felipe") {
+                preguica1()
                 vida2 = vida2 - 6
             }
             if (p == "Kenzo") {
+                preguica1()
                 vida2 = vida2 - 6
             }
             ataqueAnterior = "Soco"
+            preguica2()
             variaveis()
             tirarAtaques()
         } else {
@@ -844,22 +856,28 @@ function fAtk1() {
         if(ataqueAnterior2 != "Soco") {
 
             if (p == "Maria") {
+                preguica1()
                 vida1 -= 5
             }
             if (p == "Letícia") {
+                preguica1()
                 vida1 -= 6
             }
             if (p == "João") {
+                preguica1()
                 vida1 -= 6
             }
             if (p == "Felipe") {
+                preguica1()
                 vida1 -= 6
             }
             if (p == "Kenzo") {
+                preguica1()
                 vida1 -= 6
             }
 
             ataqueAnterior2 = "Soco"
+            preguica2()
             variaveis()
             tirarAtaques()
         } else {
@@ -883,10 +901,11 @@ function fAtk2() {
         if (p == "Maria") {
 
             if(ataqueAnterior != "Puxada de Cabelo") {
-
+                preguica1()
                 vida2 -= 8
                 vida1 -= 2
                 ataqueAnterior = "Puxada de Cabelo"
+                preguica2()
                 variaveis()
                 tirarAtaques()
             }
@@ -894,10 +913,11 @@ function fAtk2() {
         if (p == "Letícia") {
 
             if(ataqueAnterior != "Calma") {
-
+                preguica1()
                 vida2 -= 4
                 vida1 += 4
                 ataqueAnterior = "Calma"
+                preguica2()
                 variaveis()
                 tirarAtaques()
             }
@@ -905,10 +925,11 @@ function fAtk2() {
         if (p == "João") {
 
             if(ataqueAnterior != "Pensar") {
-
+                preguica1()
                 vida1 += 3
                 rodadaPensar = rodada + 2
                 ataqueAnterior = "Pensar"
+                preguica2()
                 variaveis()
                 tirarAtaques()
             }
@@ -916,7 +937,6 @@ function fAtk2() {
         if (p == "Felipe") {
 
             if(ataqueAnterior != "Preguiça") {
-
                 vida1 += 5
                 fator = 1
                 ataqueAnterior = "Preguiça"
@@ -927,11 +947,12 @@ function fAtk2() {
         if (p == "Kenzo") {
 
             if(ataqueAnterior != "Frio") {
-
+                preguica1()
                 vida1 -= 12
                 rodadafrio1 = rodada + 1
                 rodadafrio2 = rodada + 3
                 ataqueAnterior = "Frio"
+                preguica2()
                 variaveis()
                 tirarAtaques()
             }
@@ -942,10 +963,11 @@ function fAtk2() {
         if (p == "Maria") {
 
             if(ataqueAnterior2 != "Puxada de Cabelo") {
-
+                preguica1()
                 vida1 -= 8
                 vida2 -= 2
                 ataqueAnterior2 = "Puxada de Cabelo"
+                preguica2()
                 variaveis()
                 tirarAtaques()
             }
@@ -953,10 +975,11 @@ function fAtk2() {
         if (p == "Letícia") {
 
             if(ataqueAnterior2 != "Calma") {
-
+                preguica1()
                 vida1 -= 4
                 vida2 += 4
                 ataqueAnterior2 = "Calma"
+                preguica2()
                 variaveis()
                 tirarAtaques()
             }
@@ -964,10 +987,11 @@ function fAtk2() {
         if (p == "João") {
 
             if(ataqueAnterior2 != "Pensar") {
-
+                preguica1()
                 vida2 += 3
                 rodadaPensar2 = rodada + 2
                 ataqueAnterior2 = "Pensar"
+                preguica2()
                 variaveis()
                 tirarAtaques()
             }
@@ -975,7 +999,6 @@ function fAtk2() {
         if (p == "Felipe") {
 
             if(ataqueAnterior2 != "Preguiça") {
-
                 vida2 += 5
                 fator2 = 1
                 ataqueAnterior2 = "Preguiça"
@@ -986,11 +1009,12 @@ function fAtk2() {
         if (p == "Kenzo") {
 
             if(ataqueAnterior2 != "Frio") {
-
+                preguica1()
                 vida2 -= 12
                 rodadafrio11 = rodada + 1
                 rodadafrio22 = rodada + 3
                 ataqueAnterior2 = "Frio"
+                preguica2()
                 variaveis()
                 tirarAtaques()
             }
@@ -1012,9 +1036,10 @@ function fAtk3() {
         if (p == "Maria") {
 
             if(ataqueAnterior != "Fofoca") {
-
+                preguica1()
                 rodada = rodada + 1
                 ataqueAnterior = "Fofoca"
+                preguica2()
                 variaveis()
                 tirarAtaques()
             }
@@ -1022,10 +1047,11 @@ function fAtk3() {
         if (p == "Letícia") {
 
             if(ataqueAnterior != "Jogar Casaco") {
-
+                preguica1()
                 vida2 = vida2 - 3
                 rodadacasaco = rodada + 1
                 ataqueAnterior = "Jogar Casaco"
+                preguica2()
                 variaveis()
                 tirarAtaques()
             }
@@ -1033,10 +1059,11 @@ function fAtk3() {
         if (p == "João") {
 
             if(ataqueAnterior != "Grosseria") {
-
+                preguica1()
                 vida2 = vida2 - 4
                 rodadagrossria = rodada + 1
                 ataqueAnterior = "Grosseria"
+                preguica2()
                 variaveis()
                 tirarAtaques()
             }
@@ -1044,11 +1071,12 @@ function fAtk3() {
         if (p == "Felipe") {
 
             if(ataqueAnterior != "Rinite") {
-
+                preguica1()
                 vida2 = vida2 - 5
                 rodadarinite = rodada + 2
                 rodadahprinite = vida2
                 ataqueAnterior = "Rinite"
+                preguica2()
                 variaveis()
                 tirarAtaques()
             }
@@ -1056,11 +1084,12 @@ function fAtk3() {
         if (p == "Kenzo") {
 
             if(ataqueAnterior != "Líder") {
-
+                preguica1()
                 rodadalider = rodada + 1
                 rodadadanolider = rodada + 2
                 rodadahplider = vida1
                 ataqueAnterior = "Líder"
+                preguica2()
                 variaveis()
                 tirarAtaques()
             }
@@ -1070,9 +1099,10 @@ function fAtk3() {
         if (p == "Maria") {
 
             if(ataqueAnterior2 != "Fofoca") {
-
+                preguica1()
                 rodada = rodada + 1
                 ataqueAnterior2 = "Fofoca"
+                preguica2()
                 variaveis()
                 tirarAtaques()
             }
@@ -1080,10 +1110,11 @@ function fAtk3() {
         if (p == "Letícia") {
 
             if(ataqueAnterior2 != "Jogar Casaco") {
-
+                preguica1()
                 vida1 = vida1 - 3
                 rodadacasaco2 = rodada + 1
                 ataqueAnterior2 = "Jogar Casaco"
+                preguica2()
                 variaveis()
                 tirarAtaques()
             }
@@ -1091,10 +1122,11 @@ function fAtk3() {
         if (p == "João") {
 
             if(ataqueAnterior2 != "Grosseria") {
-
+                preguica1()
                 vida1 = vida1 - 4
                 rodadagrossria2 = rodada + 1
                 ataqueAnterior2 = "Grosseria"
+                preguica2()
                 variaveis()
                 tirarAtaques()
             }
@@ -1102,11 +1134,12 @@ function fAtk3() {
         if (p == "Felipe") {
 
             if(ataqueAnterior2 != "Rinite") {
-
+                preguica1()
                 vida1 = vida1 - 5
                 rodadarinite2 = rodada + 2
                 rodadahprinite2 = vida1
                 ataqueAnterior2 = "Rinite"
+                preguica2()
                 variaveis()
                 tirarAtaques()
             }
@@ -1114,11 +1147,12 @@ function fAtk3() {
         if (p == "Kenzo") {
 
             if(ataqueAnterior2 != "Líder") {
-
+                preguica1()
                 rodadalider2 = rodada + 1
                 rodadadanolider2 = rodada + 2
                 rodadahplider2 = vida2
                 ataqueAnterior2 = "Líder"
+                preguica2()
                 variaveis()
                 tirarAtaques()
             }
@@ -1140,10 +1174,11 @@ function fAtk4() {
         if (p == "Maria") {
 
             if(ataqueAnterior != "Tapa") {
-
+                preguica1()
                 vida2 = vida2 - 10
                 rodadatapa = rodada + 2
                 ataqueAnterior = "Tapa"
+                preguica2()
                 variaveis()
                 tirarAtaques()
             }
@@ -1151,9 +1186,10 @@ function fAtk4() {
         if (p == "Letícia") {
             
             if(ataqueAnterior != "Cabeçada") {
-
+                preguica1()
                 vida2 = vida2 - 7
                 ataqueAnterior = "Cabeçada"
+                preguica2()
                 variaveis()
                 tirarAtaques()
             }
@@ -1161,10 +1197,11 @@ function fAtk4() {
         if (p == "João") {
 
             if(ataqueAnterior != "Se Jogar") {
-
+                preguica1()
                 vida2 = vida2 - 8
                 rodadasejogar = rodada + 2
                 ataqueAnterior = "Se Jogar"
+                preguica2()
                 variaveis()
                 tirarAtaques()
             }
@@ -1172,10 +1209,11 @@ function fAtk4() {
         if (p == "Felipe") {
 
             if(ataqueAnterior != "Tirar Aparelho") {
-
+                preguica1()
                 rodadaaparelho = rodada + 2
                 rodadaaparelho2 = rodada + 4
                 ataqueAnterior = "Tirar Aparelho"
+                preguica2()
                 variaveis()
                 tirarAtaques()
             }
@@ -1183,9 +1221,10 @@ function fAtk4() {
         if (p == "Kenzo") {
 
             if(ataqueAnterior != "Xingamento") {
-
+                preguica1()
                 vida2 = vida2 - 8
                 ataqueAnterior = "Xingamento"
+                preguica2()
                 variaveis()
                 tirarAtaques()
             }
@@ -1196,10 +1235,11 @@ function fAtk4() {
         if (p == "Maria") {
 
             if(ataqueAnterior2 != "Tapa") {
-
+                preguica1()
                 vida1 = vida1 - 10
                 rodadatapa2 = rodada + 2
                 ataqueAnterior2 = "Tapa"
+                preguica2()
                 variaveis()
                 tirarAtaques()
             }
@@ -1207,9 +1247,10 @@ function fAtk4() {
         if (p == "Letícia") {
 
             if(ataqueAnterior2 != "Cabeçada") {
-
+                preguica1()
                 vida1 = vida1 - 7
                 ataqueAnterior2 = "Cabeçada"
+                preguica2()
                 variaveis()
                 tirarAtaques()
             }
@@ -1217,10 +1258,11 @@ function fAtk4() {
         if (p == "João") {
 
             if(ataqueAnterior2 != "Se Jogar") {
-
+                preguica1()
                 vida1 = vida1 - 8
                 rodadasejogar2 = rodada + 2
                 ataqueAnterior2 = "Se Jogar"
+                preguica2()
                 variaveis()
                 tirarAtaques()
             }
@@ -1228,10 +1270,11 @@ function fAtk4() {
         if (p == "Felipe") {
 
             if(ataqueAnterior2 != "Tirar Aparelho") {
-
+                preguica1()
                 rodadaaparelho11 = rodada + 2
                 rodadaaparelho22 = rodada + 4
                 ataqueAnterior2 = "Tirar Aparelho"
+                preguica2()
                 variaveis()
                 tirarAtaques()
             }
@@ -1239,9 +1282,10 @@ function fAtk4() {
         if (p == "Kenzo") {
 
             if(ataqueAnterior2 != "Xingamento") {
-
+                preguica1()
                 vida1 = vida1 - 8
                 ataqueAnterior2 = "Xingamento"
+                preguica2()
                 variaveis()
                 tirarAtaques()
             }
@@ -1261,25 +1305,32 @@ function fAtk5() {
     if (rodada % 2 != 0) {
 
         if (p == "Maria" && ultimate1 == 0 && rodada > 7) {
+            preguica1()
             vida1 = vida1 + 30
             ultimate1 = 1
+            preguica2()
             variaveis()
             tirarAtaques()
         }
         if (p == "Letícia" && ultimate1 == 0 && rodada > 11) {
+            preguica1()
             rodadadevoradoradelivros1 = rodada + 1
             rodadadevoradoradelivros2 = rodada + 3
             ultimate1 = 1
+            preguica2()
             variaveis()
             tirarAtaques()
         }
         if (p == "João" && ultimate1 == 0 && rodada > 9) {
+            preguica1()
             vida2 = vida2 * 0.70
             ultimate1 = 1
+            preguica2()
             variaveis()
             tirarAtaques()
         }
         if (p == "Felipe" && ultimate1 == 0 && rodada > 5) {
+            preguica1()
 
             let p1 = localStorage.getItem('player1');
             let p2 = localStorage.getItem('player2');
@@ -1316,12 +1367,15 @@ function fAtk5() {
             }
 
             ultimate1 = 1
+            preguica2()
             variaveis()
             tirarAtaques()
         }
         if (p == "Kenzo" && ultimate1 == 0 && rodada > 19) {
+            preguica1()
             vida2 = vida2 - 40
             ultimate1 = 1
+            preguica2()
             variaveis()
             tirarAtaques()
         }
@@ -1329,25 +1383,32 @@ function fAtk5() {
     } else {
 
         if (p == "Maria" && ultimate2 == 0 && rodada > 7) {
+            preguica1()
             vida2 = vida2 + 30
             ultimate2 = 1
+            preguica2()
             variaveis()
             tirarAtaques()
         }
         if (p == "Letícia" && ultimate2 == 0 && rodada > 11) {
+            preguica1()
             rodadadevoradoradelivros11 = rodada + 1
             rodadadevoradoradelivros22 = rodada + 3
             ultimate2 = 1
+            preguica2()
             variaveis()
             tirarAtaques()
         }
         if (p == "João" && ultimate2 == 0 && rodada > 9) {
+            preguica1()
             vida1 = vida1 * 0.70
             ultimate2 = 1
+            preguica2()
             variaveis()
             tirarAtaques()
         }
         if (p == "Felipe" && ultimate2 == 0 && rodada > 5) {
+            preguica1()
 
             let p1 = localStorage.getItem('player1');
             let p2 = localStorage.getItem('player2');
@@ -1384,12 +1445,15 @@ function fAtk5() {
             }
 
             ultimate2 = 1
+            preguica2()
             variaveis()
             tirarAtaques()
         }
         if (p == "Kenzo" && ultimate2 == 0 && rodada > 19) {
+            preguica1()
             vida1 = vida1 - 40
             ultimate2 = 1
+            preguica2()
             variaveis()
             tirarAtaques()
         }
