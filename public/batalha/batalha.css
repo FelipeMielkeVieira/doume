@@ -159,3 +159,14 @@ h1 {
 .botoesAtk:hover {
     cursor: pointer;
 }
+
+.descricao {
+    width: 30vw;
+    height: 45vh;
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

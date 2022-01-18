@@ -407,7 +407,7 @@ function funcaoAtq4(p, div) {
         div.innerText = 'Cabeçada = Você bate sua cabeça no inimigo, o que causa 7 de dano'
     }
     if (p == "João") {
-        div.innerText = 'Se jogar = Ser sem vergonha tem seus pontos positivos, o que o faz se jogar em cima do seu inimigo, causando 8 de dano, porém inferindo -2 de dano na próxima rodada'
+        div.innerText = 'Se jogar = Não ter vergonha tem seus pontos positivos, o que o faz se jogar em cima do seu inimigo, causando 8 de dano, porém inferindo -2 de dano na próxima rodada'
     }
     if (p == "Felipe") {
         div.innerText = 'Tirar aparelho = Aparelhos doem, então tirar eles te deixa forte. Você ganha +5 de dano nas próximas 2 rodadas'
@@ -557,6 +557,7 @@ let atk2
 let atk3
 let atk4
 let atk5
+let divDescricao
 
 function escolhaAtaques() {
 
@@ -596,6 +597,9 @@ function escolhaAtaques() {
     Ult = document.createElement('div');
     Ult.className = 'ult';
 
+    divDescricao = document.createElement('div');
+    divDescricao.className = 'descricao';
+
     funcaoUltimate(nomeP, atk5);
 
     atq1(nomeP, atk1);
@@ -613,12 +617,154 @@ function escolhaAtaques() {
     linhaInst.appendChild(linhaAtk1)
     linhaInst.appendChild(linhaAtk2)
     linhaInst.appendChild(Ult)
+    linhaInst.appendChild(divDescricao)
 
     atk1.onclick = fAtk1;
     atk2.onclick = fAtk2;
     atk3.onclick = fAtk3;
     atk4.onclick = fAtk4;
     atk5.onclick = fAtk5;
+
+    atk1.onpointerover = divAtk1
+    atk2.onpointerover = divAtk2
+    atk3.onpointerover = divAtk3
+    atk4.onpointerover = divAtk4
+    atk5.onpointerover = divAtk5
+}
+
+function divAtk1() {
+
+    let p
+
+    if (rodada % 2 != 0) {
+        p = localStorage.getItem('player1')
+    } else {
+        p = localStorage.getItem('player2')
+    }
+
+    if (p == "Maria") {
+        divDescricao.innerText = 'Golpeia o inimigo causando 5 de dano'
+    }
+    if (p == "Letícia") {
+        divDescricao.innerText = 'Golpeia o inimigo causando 6 de dano'
+    }
+    if (p == "João") {
+        divDescricao.innerText = 'Golpeia o inimigo causando 6 de dano'
+    }
+    if (p == "Felipe") {
+        divDescricao.innerText = 'Golpeia o inimigo causando 6 de dano'
+    }
+    if (p == "Kenzo") {
+        divDescricao.innerText = 'Golpeia o inimigo causando 6 de dano'
+    }
+}
+
+function divAtk2() {
+
+    let p
+
+    if (rodada % 2 != 0) {
+        p = localStorage.getItem('player1')
+    } else {
+        p = localStorage.getItem('player2')
+    }
+
+    if (p == "Maria") {
+        divDescricao.innerText = 'Puxa o cabelo do inimigo, causando 8 de dano, porém levando 2 de dano'
+    }
+    if (p == "Letícia") {
+        divDescricao.innerText = 'Sua mente calma te deixa focada, causando 4 de dano ao inimigo e curando 4 de vida'
+    }
+    if (p == "João") {
+        divDescricao.innerText = 'Você observa calmamente seu inimigo e descobre seu ponto fraco, o curando em 3 de vida, e ganhando +4 de dano na próxima rodada'
+    }
+    if (p == "Felipe") {
+        divDescricao.innerText = 'Sua preguiça é contagiante, o que deixa o inimigo causando -20% de dano nas próximas 5 rodadas, e o curando em +5'
+    }
+    if (p == "Kenzo") {
+        divDescricao.innerText = 'Sua fraqueza ao frio te faz perder 12 de vida, porém fazendo o inimigo perder 2 rodadas'
+    }
+}
+
+function divAtk3() {
+
+    let p
+
+    if (rodada % 2 != 0) {
+        p = localStorage.getItem('player1')
+    } else {
+        p = localStorage.getItem('player2')
+    }
+
+    if (p == "Maria") {
+        divDescricao.innerText = 'Você exclui o seu inimigo das fofocas, fazendo-o perder uma rodada'
+    }
+    if (p == "Letícia") {
+        divDescricao.innerText = 'Um casaco pode ser mortal, dando 3 de dano ao inimigo e te deixando sem levar dano por 1 rodada'
+    }
+    if (p == "João") {
+        divDescricao.innerText = 'Sua boca suja deixa seu inimigo triste, causando 4 de dano, e reduzindo o ataque do oponente na próxima rodada em -4'
+    }
+    if (p == "Felipe") {
+        divDescricao.innerText = "Tossir na cara do inimigo sempre é uma opção, o que dá 5 de dano e o faz levar o dobro de dano na próxima rodada"
+    }
+    if (p == "Kenzo") {
+        divDescricao.innerText = 'Suas habilidades ruins em liderança espantam o inimigo, o fazendo dar 50% menos dano na próxima rodada, além de ganhar +3 de dano'
+    }
+}
+
+function divAtk4() {
+
+    let p
+
+    if (rodada % 2 != 0) {
+        p = localStorage.getItem('player1')
+    } else {
+        p = localStorage.getItem('player2')
+    }
+
+    if (p == "Maria") {
+        divDescricao.innerText = 'Você dá um tapa bem lento na cara do inimigo, fazendo-o perder 10 de vida, porém perdendo uma rodada'
+    }
+    if (p == "Letícia") {
+        divDescricao.innerText = 'Você bate sua cabeça no inimigo, o que causa 7 de dano'
+    }
+    if (p == "João") {
+        divDescricao.innerText = 'Não ter vergonha tem seus pontos positivos, o que o faz se jogar em cima do seu inimigo, causando 8 de dano, porém inferindo -2 de dano na próxima rodada'
+    }
+    if (p == "Felipe") {
+        divDescricao.innerText = 'Aparelhos doem, então tirar eles te deixa forte. Você ganha +5 de dano nas próximas 2 rodadas'
+    }
+    if (p == "Kenzo") {
+        divDescricao.innerText = 'Você intimida o inimigo com apenas um xingamento, causando 8 de dano'
+    }
+}
+
+function divAtk5() {
+
+    let p
+
+    if (rodada % 2 != 0) {
+        p = localStorage.getItem('player1')
+    } else {
+        p = localStorage.getItem('player2')
+    }
+
+    if (p == "Maria") {
+        divDescricao.innerText = 'Suas mechas recém-pintadas revigoram e tranformam sua vida, ganhando mais 30 de vida (disponível a partir da rodada 8)'
+    }
+    if (p == "Letícia") {
+        divDescricao.innerText = 'Sua grande habilidade de leitura é levada à vida real, dando 5 de dano ao inimigo e ganhando 2 rodadas extras (disponível a partir da rodada 12)'
+    }
+    if (p == "João") {
+        divDescricao.innerText = 'De alguma forma, você calcula o seu inimigo, tirando 30% da sua vida (disponível a partir da rodada 10)'
+    }
+    if (p == "Felipe") {
+        divDescricao.innerText = 'Você é expert em jogos de simulação, o suficiente para você mudar o próprio jogo em que você está. Os dois jogadores voltam à seu estado inicial, e você ganha +3 rodadas (disponível a partir da rodada 6)'
+    }
+    if (p == "Kenzo") {
+        divDescricao.innerText = 'Você é parte do melhor fã clube do mundo, o que faz o inimigo ter medo de você, levando 40 de dano (disponível a partir da rodada 20)'
+    }
 }
 
 function preguica1() {
@@ -671,44 +817,90 @@ function variaveis() {
 
 function funcaoUltimate(p, botao) {
 
-    if (p == "Maria") {
+    if (rodada % 2 != 0) {
 
-        if (rodada > 7) {
-            botao.style.backgroundColor = 'green'
-        } else {
-            botao.style.backgroundColor = 'red'
+        if (p == "Maria") {
+
+            if (rodada > 7 && ultimate1 != 1) {
+                botao.style.backgroundColor = 'green'
+            } else {
+                botao.style.backgroundColor = 'red'
+            }
         }
-    }
-    if (p == "Letícia") {
-
-        if (rodada > 11) {
-            botao.style.backgroundColor = 'green'
-        } else {
-            botao.style.backgroundColor = 'red'
+        if (p == "Letícia") {
+    
+            if (rodada > 11 && ultimate1 != 1) {
+                botao.style.backgroundColor = 'green'
+            } else {
+                botao.style.backgroundColor = 'red'
+            }
         }
-    }
-    if (p == "João") {
-
-        if (rodada > 9) {
-            botao.style.backgroundColor = 'green'
-        } else {
-            botao.style.backgroundColor = 'red'
+        if (p == "João") {
+    
+            if (rodada > 9 && ultimate1 != 1) {
+                botao.style.backgroundColor = 'green'
+            } else {
+                botao.style.backgroundColor = 'red'
+            }
         }
-    }
-    if (p == "Felipe") {
-
-        if (rodada > 5) {
-            botao.style.backgroundColor = 'green'
-        } else {
-            botao.style.backgroundColor = 'red'
+        if (p == "Felipe") {
+    
+            if (rodada > 5 && ultimate1 != 1) {
+                botao.style.backgroundColor = 'green'
+            } else {
+                botao.style.backgroundColor = 'red'
+            }
         }
-    }
-    if (p == "Kenzo") {
+        if (p == "Kenzo") {
+    
+            if (rodada > 19 && ultimate1 != 1) {
+                botao.style.backgroundColor = 'green'
+            } else {
+                botao.style.backgroundColor = 'red'
+            }
+        }
 
-        if (rodada > 19) {
-            botao.style.backgroundColor = 'green'
-        } else {
-            botao.style.backgroundColor = 'red'
+    } else {
+        
+        if (p == "Maria") {
+
+            if (rodada > 7 && ultimate2 != 1) {
+                botao.style.backgroundColor = 'green'
+            } else {
+                botao.style.backgroundColor = 'red'
+            }
+        }
+        if (p == "Letícia") {
+    
+            if (rodada > 11 && ultimate2 != 1) {
+                botao.style.backgroundColor = 'green'
+            } else {
+                botao.style.backgroundColor = 'red'
+            }
+        }
+        if (p == "João") {
+    
+            if (rodada > 9 && ultimate2 != 1) {
+                botao.style.backgroundColor = 'green'
+            } else {
+                botao.style.backgroundColor = 'red'
+            }
+        }
+        if (p == "Felipe") {
+    
+            if (rodada > 5 && ultimate2 != 1) {
+                botao.style.backgroundColor = 'green'
+            } else {
+                botao.style.backgroundColor = 'red'
+            }
+        }
+        if (p == "Kenzo") {
+    
+            if (rodada > 19 && ultimate2 != 1) {
+                botao.style.backgroundColor = 'green'
+            } else {
+                botao.style.backgroundColor = 'red'
+            }
         }
     }
 }
@@ -908,6 +1100,8 @@ function fAtk2() {
                 preguica2()
                 variaveis()
                 tirarAtaques()
+            } else {
+                alert("O mesmo ataque não pode ser usado duas vezes seguidas!")
             }
         }
         if (p == "Letícia") {
@@ -920,6 +1114,8 @@ function fAtk2() {
                 preguica2()
                 variaveis()
                 tirarAtaques()
+            } else {
+                alert("O mesmo ataque não pode ser usado duas vezes seguidas!")
             }
         }
         if (p == "João") {
@@ -932,6 +1128,8 @@ function fAtk2() {
                 preguica2()
                 variaveis()
                 tirarAtaques()
+            } else {
+                alert("O mesmo ataque não pode ser usado duas vezes seguidas!")
             }
         }
         if (p == "Felipe") {
@@ -942,6 +1140,8 @@ function fAtk2() {
                 ataqueAnterior = "Preguiça"
                 variaveis()
                 tirarAtaques()
+            } else {
+                alert("O mesmo ataque não pode ser usado duas vezes seguidas!")
             }
         }
         if (p == "Kenzo") {
@@ -955,6 +1155,8 @@ function fAtk2() {
                 preguica2()
                 variaveis()
                 tirarAtaques()
+            } else {
+                alert("O mesmo ataque não pode ser usado duas vezes seguidas!")
             }
         }
 
@@ -970,6 +1172,8 @@ function fAtk2() {
                 preguica2()
                 variaveis()
                 tirarAtaques()
+            } else {
+                alert("O mesmo ataque não pode ser usado duas vezes seguidas!")
             }
         }
         if (p == "Letícia") {
@@ -982,6 +1186,8 @@ function fAtk2() {
                 preguica2()
                 variaveis()
                 tirarAtaques()
+            } else {
+                alert("O mesmo ataque não pode ser usado duas vezes seguidas!")
             }
         }
         if (p == "João") {
@@ -994,6 +1200,8 @@ function fAtk2() {
                 preguica2()
                 variaveis()
                 tirarAtaques()
+            } else {
+                alert("O mesmo ataque não pode ser usado duas vezes seguidas!")
             }
         }
         if (p == "Felipe") {
@@ -1004,6 +1212,8 @@ function fAtk2() {
                 ataqueAnterior2 = "Preguiça"
                 variaveis()
                 tirarAtaques()
+            } else {
+                alert("O mesmo ataque não pode ser usado duas vezes seguidas!")
             }
         }
         if (p == "Kenzo") {
@@ -1017,6 +1227,8 @@ function fAtk2() {
                 preguica2()
                 variaveis()
                 tirarAtaques()
+            } else {
+                alert("O mesmo ataque não pode ser usado duas vezes seguidas!")
             }
         }
     }
@@ -1042,6 +1254,8 @@ function fAtk3() {
                 preguica2()
                 variaveis()
                 tirarAtaques()
+            } else {
+                alert("O mesmo ataque não pode ser usado duas vezes seguidas!")
             }
         }
         if (p == "Letícia") {
@@ -1054,6 +1268,8 @@ function fAtk3() {
                 preguica2()
                 variaveis()
                 tirarAtaques()
+            } else {
+                alert("O mesmo ataque não pode ser usado duas vezes seguidas!")
             }
         }
         if (p == "João") {
@@ -1066,6 +1282,8 @@ function fAtk3() {
                 preguica2()
                 variaveis()
                 tirarAtaques()
+            } else {
+                alert("O mesmo ataque não pode ser usado duas vezes seguidas!")
             }
         }
         if (p == "Felipe") {
@@ -1079,6 +1297,8 @@ function fAtk3() {
                 preguica2()
                 variaveis()
                 tirarAtaques()
+            } else {
+                alert("O mesmo ataque não pode ser usado duas vezes seguidas!")
             }
         }
         if (p == "Kenzo") {
@@ -1092,6 +1312,8 @@ function fAtk3() {
                 preguica2()
                 variaveis()
                 tirarAtaques()
+            } else {
+                alert("O mesmo ataque não pode ser usado duas vezes seguidas!")
             }
         }
     } else {
@@ -1105,6 +1327,8 @@ function fAtk3() {
                 preguica2()
                 variaveis()
                 tirarAtaques()
+            } else {
+                alert("O mesmo ataque não pode ser usado duas vezes seguidas!")
             }
         }
         if (p == "Letícia") {
@@ -1117,6 +1341,8 @@ function fAtk3() {
                 preguica2()
                 variaveis()
                 tirarAtaques()
+            } else {
+                alert("O mesmo ataque não pode ser usado duas vezes seguidas!")
             }
         }
         if (p == "João") {
@@ -1129,6 +1355,8 @@ function fAtk3() {
                 preguica2()
                 variaveis()
                 tirarAtaques()
+            } else {
+                alert("O mesmo ataque não pode ser usado duas vezes seguidas!")
             }
         }
         if (p == "Felipe") {
@@ -1142,6 +1370,8 @@ function fAtk3() {
                 preguica2()
                 variaveis()
                 tirarAtaques()
+            } else {
+                alert("O mesmo ataque não pode ser usado duas vezes seguidas!")
             }
         }
         if (p == "Kenzo") {
@@ -1155,6 +1385,8 @@ function fAtk3() {
                 preguica2()
                 variaveis()
                 tirarAtaques()
+            } else {
+                alert("O mesmo ataque não pode ser usado duas vezes seguidas!")
             }
         }
     }
@@ -1181,6 +1413,8 @@ function fAtk4() {
                 preguica2()
                 variaveis()
                 tirarAtaques()
+            } else {
+                alert("O mesmo ataque não pode ser usado duas vezes seguidas!")
             }
         }
         if (p == "Letícia") {
@@ -1192,6 +1426,8 @@ function fAtk4() {
                 preguica2()
                 variaveis()
                 tirarAtaques()
+            } else {
+                alert("O mesmo ataque não pode ser usado duas vezes seguidas!")
             }
         }
         if (p == "João") {
@@ -1204,6 +1440,8 @@ function fAtk4() {
                 preguica2()
                 variaveis()
                 tirarAtaques()
+            } else {
+                alert("O mesmo ataque não pode ser usado duas vezes seguidas!")
             }
         }
         if (p == "Felipe") {
@@ -1216,6 +1454,8 @@ function fAtk4() {
                 preguica2()
                 variaveis()
                 tirarAtaques()
+            } else {
+                alert("O mesmo ataque não pode ser usado duas vezes seguidas!")
             }
         }
         if (p == "Kenzo") {
@@ -1227,6 +1467,8 @@ function fAtk4() {
                 preguica2()
                 variaveis()
                 tirarAtaques()
+            } else {
+                alert("O mesmo ataque não pode ser usado duas vezes seguidas!")
             }
         }
 
@@ -1242,6 +1484,8 @@ function fAtk4() {
                 preguica2()
                 variaveis()
                 tirarAtaques()
+            } else {
+                alert("O mesmo ataque não pode ser usado duas vezes seguidas!")
             }
         }
         if (p == "Letícia") {
@@ -1253,6 +1497,8 @@ function fAtk4() {
                 preguica2()
                 variaveis()
                 tirarAtaques()
+            } else {
+                alert("O mesmo ataque não pode ser usado duas vezes seguidas!")
             }
         }
         if (p == "João") {
@@ -1265,6 +1511,8 @@ function fAtk4() {
                 preguica2()
                 variaveis()
                 tirarAtaques()
+            } else {
+                alert("O mesmo ataque não pode ser usado duas vezes seguidas!")
             }
         }
         if (p == "Felipe") {
@@ -1277,6 +1525,8 @@ function fAtk4() {
                 preguica2()
                 variaveis()
                 tirarAtaques()
+            } else {
+                alert("O mesmo ataque não pode ser usado duas vezes seguidas!")
             }
         }
         if (p == "Kenzo") {
@@ -1288,6 +1538,8 @@ function fAtk4() {
                 preguica2()
                 variaveis()
                 tirarAtaques()
+            } else {
+                alert("O mesmo ataque não pode ser usado duas vezes seguidas!")
             }
         }
     }
@@ -1330,7 +1582,6 @@ function fAtk5() {
             tirarAtaques()
         }
         if (p == "Felipe" && ultimate1 == 0 && rodada > 5) {
-            preguica1()
 
             let p1 = localStorage.getItem('player1');
             let p2 = localStorage.getItem('player2');
@@ -1365,9 +1616,11 @@ function fAtk5() {
             if (p2 == "Kenzo") {
                 vida2 = 60
             }
-
+            
+            rodadasimulacao1 = rodada + 1
+            rodadasimulacao2 = rodada + 3
+            rodadasimulacao3 = rodada + 5
             ultimate1 = 1
-            preguica2()
             variaveis()
             tirarAtaques()
         }
@@ -1408,7 +1661,6 @@ function fAtk5() {
             tirarAtaques()
         }
         if (p == "Felipe" && ultimate2 == 0 && rodada > 5) {
-            preguica1()
 
             let p1 = localStorage.getItem('player1');
             let p2 = localStorage.getItem('player2');
@@ -1444,8 +1696,11 @@ function fAtk5() {
                 vida2 = 60
             }
 
+            rodadasimulacao11 = rodada + 1
+            rodadasimulacao22 = rodada + 3
+            rodadasimulacao33 = rodada + 5
+
             ultimate2 = 1
-            preguica2()
             variaveis()
             tirarAtaques()
         }
@@ -1506,6 +1761,12 @@ let rodadadevoradoradelivros1
 let rodadadevoradoradelivros2
 let rodadadevoradoradelivros11
 let rodadadevoradoradelivros22
+let rodadasimulacao1
+let rodadasimulacao2
+let rodadasimulacao3
+let rodadasimulacao11
+let rodadasimulacao22
+let rodadasimulacao33
 
 function efeitoRodada() {
 
@@ -1581,6 +1842,24 @@ function efeitoRodada() {
     if (rodada == rodadadevoradoradelivros22) {
         rodada = rodada + 1
     }
+    if(rodada == rodadasimulacao11){
+        rodada = rodada + 1
+    }
+    if(rodada == rodadasimulacao22){
+        rodada = rodada + 1
+    }
+    if(rodada == rodadasimulacao33){
+        rodada = rodada + 1
+    }
+    if(rodada == rodadasimulacao1){
+        rodada = rodada + 1
+    }
+    if(rodada == rodadasimulacao2){
+        rodada = rodada + 1
+    }
+    if(rodada == rodadasimulacao3){
+        rodada = rodada + 1
+    }
 }
 
 let divVida
@@ -1598,6 +1877,7 @@ function tirarAtaques() {
     linhaInst.removeChild(linhaAtk1)
     linhaInst.removeChild(linhaAtk2)
     linhaInst.removeChild(Ult)
+    linhaInst.removeChild(divDescricao)
 
     linhaInst.style.display = 'flex'
     linhaInst.style.flexDirection = 'column'
